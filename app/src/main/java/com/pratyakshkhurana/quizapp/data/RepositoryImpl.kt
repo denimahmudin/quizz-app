@@ -1,10 +1,13 @@
-package com.pratyakshkhurana.quizapp
+package com.pratyakshkhurana.quizapp.data
 
-class GetAllQuestions {
+import com.pratyakshkhurana.quizapp.Question
+import com.pratyakshkhurana.quizapp.domain.Repository
 
-    fun fetchData(): ArrayList<Questions> {
-        val allQuestions = ArrayList<Questions>()
-        val q1 = Questions(
+class RepositoryImpl : Repository {
+
+    override fun fetchData(): ArrayList<Question> {
+        val allQuestions = ArrayList<Question>()
+        val q1 = Question(
             1,
             "Who invented C++ ?",
             "Dennis Ritchie",
@@ -13,7 +16,7 @@ class GetAllQuestions {
             "Bjarne Stroustrup",
             4
         )
-        val q2 = Questions(
+        val q2 = Question(
             2,
             "Which of the following is the correct for including a user defined header files in C++ ?",
             "#include [userdefined]",
@@ -22,7 +25,7 @@ class GetAllQuestions {
             "#include <userdefined>",
             2
         )
-        val q3 = Questions(
+        val q3 = Question(
             3,
             "Which of the following is used for comments in C++ ?",
             "/* comment */",
@@ -31,7 +34,7 @@ class GetAllQuestions {
             "both // comment or /* comment */",
             4
         )
-        val q4 = Questions(
+        val q4 = Question(
             4,
             "Which of the following is a correct identifier in C++ ?",
             " VAR_1234",
@@ -40,7 +43,7 @@ class GetAllQuestions {
             " 7var_name",
             1
         )
-        val q5 = Questions(
+        val q5 = Question(
             5,
             "Which of the following is not a type of Constructor in C++ ?",
             "Default constructor",
@@ -49,7 +52,7 @@ class GetAllQuestions {
             "Friend constructor",
             4
         )
-        val q6 = Questions(
+        val q6 = Question(
             6,
             "What is the size of wchar_t in C++ ?",
             "Based on the number of bits in the system",
@@ -58,7 +61,7 @@ class GetAllQuestions {
             "2",
             1
         )
-        val q7 = Questions(
+        val q7 = Question(
             7,
             "Which keyword is used to define the macros in C++ ?",
             "#macro",
@@ -67,7 +70,7 @@ class GetAllQuestions {
             "define",
             2
         )
-        val q8 = Questions(
+        val q8 = Question(
             8,
             "What is Inheritance in C++ ?",
             "Deriving new classes from existing classes",
@@ -76,7 +79,7 @@ class GetAllQuestions {
             "Wrapping of data into a single class",
             1
         )
-        val q9 = Questions(
+        val q9 = Question(
             9,
             " Which of the following symbol is used to declare the preprocessor directives in C++ ?",
             "%",
@@ -85,7 +88,7 @@ class GetAllQuestions {
             "*",
             3
         )
-        val q10 = Questions(
+        val q10 = Question(
             10,
             "Which of the following constructors are provided by the C++ compiler if not defined in a class ?",
             "Copy constructor",

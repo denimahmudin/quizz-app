@@ -12,6 +12,7 @@ import android.view.animation.DecelerateInterpolator
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.pratyakshkhurana.quizapp.data.RepositoryImpl
 import kotlinx.android.synthetic.main.activity_questions2.*
 
 
@@ -19,7 +20,7 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
     private var mSelectOptionPosition: Int = 0
     private var mCurrentQuestionIndex: Int = 1
-    private lateinit var mQuestionList: ArrayList<Questions>
+    private lateinit var mQuestionList: ArrayList<Question>
     private lateinit var mUsername: String
     private lateinit var category: String
     private var mCorrectAnswers: Int = 0
@@ -54,7 +55,8 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
         mUsername = intent.getStringExtra("user").toString()
         category = intent.getStringExtra("category").toString()
-        mQuestionList = GetAllQuestions().fetchData()
+        val repo = RepositoryImpl()
+        mQuestionList = repo.fetchData()
 
         setQuestion()
 

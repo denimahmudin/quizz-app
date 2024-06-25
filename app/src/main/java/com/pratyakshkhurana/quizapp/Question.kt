@@ -2,7 +2,7 @@ package com.pratyakshkhurana.quizapp
 
 
 //model of question, basically a class of data we defined, user defined type
-data class Questions(
+data class Question(
     val id:Int,
     val question: String,
     val option1:String,
